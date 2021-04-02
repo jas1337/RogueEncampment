@@ -20,6 +20,16 @@ public class ExtraordinaryVillager extends Villager {
     }
 
     public String getHelloText() {
-        return super.getHelloText() + " " + this.skill.text;
+        return super.getHelloText() + " " + skill.text;
+    }
+
+    @Override
+    public void attack(Fighter victim) {
+        // Do nothing
+    }
+
+    @Override
+    public void takeHit(int damage) {
+        this.setHealth(0);
     }
 }
